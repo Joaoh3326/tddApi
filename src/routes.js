@@ -4,6 +4,8 @@ const SessionController = require("./app/controllers/SessionController");
 
 const authMiddleware = require("./app/middlewares/auth");
 
+routes.get("/", (req, res) => res.send("HELLO WORLD"));
+
 routes.post("/sessions", SessionController.store);
 
 routes.use(authMiddleware);
